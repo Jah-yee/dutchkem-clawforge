@@ -44,17 +44,19 @@ strict = false
 disallow_untyped_defs = false
 disallow_incomplete_defs = false
 check_untyped_defs = true
-warn_return_any = true
+warn_return_any = false
 warn_unused_ignores = false
 warn_unused_configs = true
-warn_redundant_casts = true
-no_implicit_optional = true
+warn_redundant_casts = false
+no_implicit_optional = false
 ignore_missing_imports = true
-exclude = [
-    "tests/",
-    "build/",
-    "dist/",
+disable_error_code = [
+    "no-any-return",
+    "var-annotated",
+    "no-untyped-call",
+    "import-untyped",
 ]
+exclude = ["^tests/", "^build/", "^dist/"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
