@@ -36,7 +36,7 @@ cp .env.example .env
 # Edit .env with your wallet credentials
 
 # 2. Install dependencies
-pip install -e .
+uv sync
 
 # 3. Run
 uvicorn clawforge.main:app --host 0.0.0.0 --port 8000
